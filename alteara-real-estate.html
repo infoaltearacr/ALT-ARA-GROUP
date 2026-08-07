@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALTĒARA Group</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --deep: #143746;
+      --deep-2: #1b4456;
+      --mist: #f6f8f9;
+      --line: #d8e1e6;
+      --soft: #eef3f5;
+      --text: #17313d;
+      --muted: #5f7681;
+      --white: #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #f7fafb 0%, #ffffff 24%, #f7fafb 100%);
+    }
+
+    .display-font { font-family: 'Cormorant Garamond', serif; }
+
+    .hero-grid {
+      background:
+        linear-gradient(125deg, rgba(20,55,70,0.95), rgba(20,55,70,0.86)),
+        radial-gradient(circle at top right, rgba(255,255,255,0.14), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(255,255,255,0.08), transparent 28%);
+    }
+
+    .property-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 25px 50px rgba(20,55,70,0.12);
+    }
+
+    .line-building {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .line-building::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(to right, transparent 0%, transparent 6%, rgba(255,255,255,0.2) 6%, rgba(255,255,255,0.2) 7%, transparent 7%, transparent 18%, rgba(255,255,255,0.2) 18%, rgba(255,255,255,0.2) 19%, transparent 19%, transparent 34%, rgba(255,255,255,0.18) 34%, rgba(255,255,255,0.18) 35%, transparent 35%, transparent 52%, rgba(255,255,255,0.22) 52%, rgba(255,255,255,0.22) 53%, transparent 53%, transparent 73%, rgba(255,255,255,0.18) 73%, rgba(255,255,255,0.18) 74%, transparent 74%);
+        opacity: 0.35;
+        pointer-events: none;
+      mask-image: linear-gradient(to top, black 20%, transparent 95%);
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .fade-up {
+        animation: fadeUp 0.8s ease both;
+      }
+      .fade-up-delay {
+        animation: fadeUp 1s ease both;
+      }
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(18px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="absolute inset-x-0 top-0 z-20">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <img src="/mnt/data/ALTĒARA-9 1.png" alt="ALTĒARA Group" class="h-14 w-14 rounded-full object-cover border border-white/20 shadow-lg bg-white/10" />
+        <div>
+          <p class="display-font text-3xl tracking-[0.25em] text-white">ALTĒARA</p>
+          <p class="text-white/70 text-xs uppercase tracking-[0.35em]">Group</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-white/80">
+        <a href="#propiedades" class="hover:text-white">Propiedades</a>
+        <a href="#contacto" class="hover:text-white">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-grid min-h-screen flex items-center">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10 pt-28 pb-16 grid lg:grid-cols-[1.15fr_0.85fr] gap-12 items-center w-full">
+        <div class="fade-up">
+          <p class="text-white/70 uppercase tracking-[0.35em] text-xs mb-5">Bienes raíces con presencia clara</p>
+          <h1 class="display-font text-white text-6xl md:text-7xl lg:text-8xl leading-[0.92] max-w-4xl">
+            Espacios que elevan
+            <span class="block text-white/80">tu próxima decisión.</span>
+          </h1>
+          <p class="mt-8 text-white/70 text-lg max-w-2xl leading-8">
+            REAL ESTATE - LEGAL - SMART HOME LIVING
+            SOLUCION INTEGRAL DESDE LA FIRMA HASTA TU HOGAR INTELIGENTE
+          </p>
+          <div class="mt-10 flex flex-col sm:flex-row gap-4">
+            <a href="#propiedades" class="inline-flex items-center justify-center px-7 py-4 bg-white text-[var(--deep)] font-semibold tracking-wide rounded-full hover:bg-slate-100 transition">Ver propiedades</a>
+            <a href="#contacto" class="inline-flex items-center justify-center px-7 py-4 border border-white/35 text-white rounded-full hover:bg-white/10 transition">Solicitar asesoría</a>
+          </div>
+          <div class="mt-14 grid grid-cols-3 gap-5 max-w-xl">
+            <div class="border-t border-white/25 pt-4">
+              <p class="display-font text-white text-4xl">12+</p>
+              <p class="text-white/70 text-sm">Propiedades destacadas</p>
+            </div>
+            <div class="border-t border-white/25 pt-4">
+              <p class="display-font text-white text-4xl">4</p>
+              <p class="text-white/70 text-sm">Zonas premium</p>
+            </div>
+            <div class="border-t border-white/25 pt-4">
+              <p class="display-font text-white text-4xl">24h</p>
+              <p class="text-white/70 text-sm">Respuesta estimada</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="fade-up-delay">
+          <div class="line-building rounded-[2rem] border border-white/20 bg-white/10 backdrop-blur-md p-6 shadow-2xl">
+            <div class="rounded-[1.5rem] bg-white text-[var(--text)] overflow-hidden">
+              <div class="p-6 border-b border-[var(--line)]">
+                <div class="flex items-center justify-between gap-4">
+                  <div>
+                    <p class="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">Propiedad destacada</p>
+                    <h2 class="display-font text-4xl text-[var(--deep)] mt-2">Residencia Costera</h2>
+                  </div>
+                  <span class="text-xs px-3 py-1 rounded-full bg-[var(--soft)] text-[var(--deep)]">Vista al mar</span>
+                </div>
+              </div>
+              <div class="p-6 space-y-6">
+                <div class="h-72 rounded-[1.25rem] bg-gradient-to-br from-[var(--deep)] to-[var(--deep-2)] relative overflow-hidden">
+                  <div class="absolute inset-x-8 bottom-8 top-12 flex items-end gap-4 opacity-70">
+                    <div class="w-16 h-28 border-2 border-white/80 rounded-t-[2rem]"></div>
+                    <div class="w-20 h-40 border-2 border-white/80 rounded-t-[2rem]"></div>
+                    <div class="w-24 h-52 border-2 border-white/80 rounded-t-[2rem]"></div>
+                    <div class="w-16 h-36 border-2 border-white/80 rounded-t-[2rem]"></div>
+                  </div>
+                  <div class="absolute left-0 right-0 bottom-9 h-px bg-white/70"></div>
+                  <div class="absolute left-10 bottom-10 w-40 h-10 border-t border-white/60 rounded-[50%]"></div>
+                </div>
+                <div class="grid grid-cols-3 gap-3 text-center">
+                  <div class="bg-[var(--soft)] rounded-2xl p-4">
+                    <p class="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Dorms</p>
+                    <p class="display-font text-3xl text-[var(--deep)]">4</p>
+                  </div>
+                  <div class="bg-[var(--soft)] rounded-2xl p-4">
+                    <p class="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Baños</p>
+                    <p class="display-font text-3xl text-[var(--deep)]">5</p>
+                  </div>
+                  <div class="bg-[var(--soft)] rounded-2xl p-4">
+                    <p class="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">m²</p>
+                    <p class="display-font text-3xl text-[var(--deep)]">420</p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div>
+                    <p class="text-sm text-[var(--muted)]">Desde</p>
+                    <p class="display-font text-4xl text-[var(--deep)]">US$ 980K</p>
+                  </div>
+                  <a href="#contacto" class="px-5 py-3 rounded-full bg-[var(--deep)] text-white text-sm hover:bg-[var(--deep-2)] transition">Agendar visita</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-8 bg-white border-y border-slate-200">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-4 gap-6 items-center">
+        <div>
+          <p class="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">Búsqueda rápida</p>
+          <h3 class="display-font text-3xl text-[var(--deep)] mt-2">Encuentra tu propiedad ideal</h3>
+        </div>
+        <div class="md:col-span-3 grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          <select class="rounded-full border border-slate-300 px-4 py-3 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[var(--deep)]">
+            <option>Tipo</option>
+            <option>Casa</option>
+            <option>Departamento</option>
+            <option>Penthouse</option>
+          </select>
+          <select class="rounded-full border border-slate-300 px-4 py-3 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[var(--deep)]">
+            <option>Zona</option>
+            <option>Centro</option>
+            <option>Playa</option>
+            <option>Residencial</option>
+          </select>
+          <select class="rounded-full border border-slate-300 px-4 py-3 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[var(--deep)]">
+            <option>Precio</option>
+            <option>US$ 100K - 300K</option>
+            <option>US$ 300K - 700K</option>
+            <option>US$ 700K+</option>
+          </select>
+          <button class="rounded-full bg-[var(--deep)] text-white px-4 py-3 hover:bg-[var(--deep-2)] transition">Buscar</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="propiedades" class="py-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+          <div>
+            <p class="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">Selección ALTĒARA</p>
+            <h2 class="display-font text-5xl text-[var(--deep)] mt-2">Propiedades destacadas</h2>
+          </div>
+          <p class="max-w-2xl text-[var(--muted)] leading-7">
+            Una colección curada para un público que busca elegancia, ubicación y valor de largo plazo. El diseño de esta página prioriza claridad visual, confianza y contacto inmediato.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+          <article class="property-card transition duration-300 bg-white rounded-[2rem] overflow-hidden border border-slate-200 shadow-sm">
+            <div class="h-64 bg-gradient-to-br from-[#183f50] to-[#2c5c70] relative">
+              <div class="absolute inset-0 opacity-20" style="background-image: linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px); background-size: 34px 34px;"></div>
+              <div class="absolute bottom-6 left-6 right-6 text-white">
+                <p class="text-xs uppercase tracking-[0.3em]">Penthouse</p>
+                <h3 class="display-font text-4xl">Vista Horizonte</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-[var(--muted)]">3 recámaras · 3 baños · 240 m² · Terraza panorámica</p>
+              <div class="mt-5 flex items-center justify-between">
+                <span class="display-font text-3xl text-[var(--deep)]">US$ 640K</span>
+                <button class="text-sm text-[var(--deep)] font-semibold">Ver más</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="property-card transition duration-300 bg-white rounded-[2rem] overflow-hidden border border-slate-200 shadow-sm">
+            <div class="h-64 bg-gradient-to-br from-[#28576a] to-[#7fa4b4] relative">
+              <div class="absolute inset-x-8 bottom-8 h-28 border border-white/70 rounded-t-[3rem]"></div>
+              <div class="absolute bottom-6 left-6 right-6 text-white">
+                <p class="text-xs uppercase tracking-[0.3em]">Residencial</p>
+                <h3 class="display-font text-4xl">Jardines del Lago</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-[var(--muted)]">4 recámaras · 4 baños · 360 m² · Jardín privado</p>
+              <div class="mt-5 flex items-center justify-between">
+                <span class="display-font text-3xl text-[var(--deep)]">US$ 890K</span>
+                <button class="text-sm text-[var(--deep)] font-semibold">Ver más</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="property-card transition duration-300 bg-white rounded-[2rem] overflow-hidden border border-slate-200 shadow-sm">
+            <div class="h-64 bg-gradient-to-br from-[#0f2d3a] to-[#436d7e] relative">
+              <div class="absolute left-10 right-10 bottom-10 top-14 border border-white/60 rounded-[2rem]"></div>
+              <div class="absolute bottom-6 left-6 right-6 text-white">
+                <p class="text-xs uppercase tracking-[0.3em]">Inversión</p>
+                <h3 class="display-font text-4xl">Torre Marina</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-[var(--muted)]">2 recámaras · 2 baños · 180 m² · Amenidades premium</p>
+              <div class="mt-5 flex items-center justify-between">
+                <span class="display-font text-3xl text-[var(--deep)]">US$ 470K</span>
+                <button class="text-sm text-[var(--deep)] font-semibold">Ver más</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="contacto" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
+        <div>
+          <p class="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">Contacto</p>
+          <h2 class="display-font text-5xl text-[var(--deep)] mt-3">Hablemos de tu próxima inversión</h2>
+          <p class="mt-6 text-[var(--muted)] leading-8 max-w-xl">
+            Esta estructura está pensada para convertir visitas en consultas. Si quieres, después puedo convertirla en una web con propiedades dinámicas, galería real, integración con WhatsApp y formularios funcionales.
+          </p>
+          <div class="mt-10 space-y-4 text-sm">
+            <p><strong>Correo:</strong> info@altearacr.com</p>
+            <p><strong>Teléfono:</strong> 71725018</p>
+            <p><strong>WhatsApp:</strong> 71725018</p>
+          </div>
+          <a href="https://wa.me/50671725018" class="mt-8 inline-flex items-center justify-center px-6 py-4 rounded-full bg-[var(--deep)] text-white hover:bg-[var(--deep-2)] transition">Escribir por WhatsApp</a>
+        </div>
+
+        <form class="bg-[var(--mist)] border border-slate-200 rounded-[2rem] p-8 shadow-sm space-y-5">
+          <div class="grid md:grid-cols-2 gap-4">
+            <input type="text" placeholder="Nombre" class="w-full rounded-2xl border border-slate-300 px-4 py-4 bg-white focus:outline-none focus:ring-2 focus:ring-[var(--deep)]" />
+            <input type="email" placeholder="Correo" class="w-full rounded-2xl border border-slate-300 px-4 py-4 bg-white focus:outline-none focus:ring-2 focus:ring-[var(--deep)]" />
+          </div>
+          <div class="grid md:grid-cols-2 gap-4">
+            <input type="text" placeholder="Teléfono" class="w-full rounded-2xl border border-slate-300 px-4 py-4 bg-white focus:outline-none focus:ring-2 focus:ring-[var(--deep)]" />
+            <select class="w-full rounded-2xl border border-slate-300 px-4 py-4 bg-white focus:outline-none focus:ring-2 focus:ring-[var(--deep)]">
+              <option>Interés principal</option>
+              <option>Comprar</option>
+              <option>Invertir</option>
+              <option>Agendar visita</option>
+            </select>
+          </div>
+          <textarea rows="5" placeholder="Cuéntanos qué tipo de propiedad buscas" class="w-full rounded-2xl border border-slate-300 px-4 py-4 bg-white focus:outline-none focus:ring-2 focus:ring-[var(--deep)]"></textarea>
+          <button type="button" class="w-full rounded-full bg-[var(--deep)] text-white py-4 font-semibold hover:bg-[var(--deep-2)] transition">Enviar consulta</button>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
