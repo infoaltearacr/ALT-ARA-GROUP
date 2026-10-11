@@ -21,6 +21,7 @@
     }
 
     html { scroll-behavior: smooth; }
+
     body {
       font-family: 'Inter', sans-serif;
       color: var(--text);
@@ -31,14 +32,14 @@
 
     .hero-grid {
       background:
-        linear-gradient(125deg, rgba(20,55,70,0.95), rgba(20,55,70,0.86)),
-        radial-gradient(circle at top right, rgba(255,255,255,0.14), transparent 30%),
-        radial-gradient(circle at bottom left, rgba(255,255,255,0.08), transparent 28%);
+        linear-gradient(125deg, rgba(20, 55, 70, 0.95), rgba(20, 55, 70, 0.86)),
+        radial-gradient(circle at top right, rgba(255, 255, 255, 0.14), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.08), transparent 28%);
     }
 
     .property-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 25px 50px rgba(20,55,70,0.12);
+      box-shadow: 0 25px 50px rgba(20, 55, 70, 0.12);
     }
 
     .line-building {
@@ -52,18 +53,15 @@
       inset: 0;
       background-image:
         linear-gradient(to right, transparent 0%, transparent 6%, rgba(255,255,255,0.2) 6%, rgba(255,255,255,0.2) 7%, transparent 7%, transparent 18%, rgba(255,255,255,0.2) 18%, rgba(255,255,255,0.2) 19%, transparent 19%, transparent 34%, rgba(255,255,255,0.18) 34%, rgba(255,255,255,0.18) 35%, transparent 35%, transparent 52%, rgba(255,255,255,0.22) 52%, rgba(255,255,255,0.22) 53%, transparent 53%, transparent 73%, rgba(255,255,255,0.18) 73%, rgba(255,255,255,0.18) 74%, transparent 74%);
-        opacity: 0.35;
-        pointer-events: none;
+      opacity: 0.35;
+      pointer-events: none;
       mask-image: linear-gradient(to top, black 20%, transparent 95%);
     }
 
     @media (prefers-reduced-motion: no-preference) {
-      .fade-up {
-        animation: fadeUp 0.8s ease both;
-      }
-      .fade-up-delay {
-        animation: fadeUp 1s ease both;
-      }
+      .fade-up { animation: fadeUp 0.8s ease both; }
+      .fade-up-delay { animation: fadeUp 1s ease both; }
+
       @keyframes fadeUp {
         from { opacity: 0; transform: translateY(18px); }
         to { opacity: 1; transform: translateY(0); }
@@ -74,13 +72,9 @@
 <body>
   <header class="absolute inset-x-0 top-0 z-20">
     <div class="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex items-center justify-between">
-      <div class="flex items-center gap-4">
-        <img src="/mnt/data/ALTĒARA-9 1.png" alt="ALTĒARA Group" class="h-14 w-14 rounded-full object-cover border border-white/20 shadow-lg bg-white/10" />
-        <div>
-          <p class="display-font text-3xl tracking-[0.25em] text-white">ALTĒARA</p>
-          <p class="text-white/70 text-xs uppercase tracking-[0.35em]">GROUP</p>
-        </div>
-      </div>
+      <a href="#inicio" class="inline-flex items-center" aria-label="ALTĒARA Group, inicio">
+        <img src="ALTĒARA-9%201.png" alt="ALTĒARA Group" class="h-14 w-auto max-w-[220px] object-contain" />
+      </a>
       <nav class="hidden md:flex items-center gap-8 text-sm text-white/80">
         <a href="#propiedades" class="hover:text-white">Propiedades</a>
         <a href="#contacto" class="hover:text-white">Contacto</a>
@@ -89,18 +83,17 @@
   </header>
 
   <main>
-    <section class="hero-grid min-h-screen flex items-center">
+    <section id="inicio" class="hero-grid min-h-screen flex items-center">
       <div class="max-w-7xl mx-auto px-6 lg:px-10 pt-28 pb-16 grid lg:grid-cols-[1.15fr_0.85fr] gap-12 items-center w-full">
         <div class="fade-up">
           <p class="text-white/70 uppercase tracking-[0.35em] text-xs mb-5">Bienes raíces con presencia clara</p>
           <h1 class="display-font text-white text-6xl md:text-7xl lg:text-8xl leading-[0.92] max-w-4xl">
-            Espacios que elevan
-            <span class="block text-white/80">tu próxima decisión.</span>
+            Solucion inegral desde la firma
+            <span class="block text-white/80">hasta tu hogar.</span>
           </h1>
           <p class="mt-8 text-white/70 text-lg max-w-2xl leading-8">
             REAL ESTATE - LEGAL - SMART HOME LIVING
-            
-            SOLUCION INTEGRAL DESDE LA FIRMA HASTA TU HOGAR INTELIGENTE
+        
           </p>
           <div class="mt-10 flex flex-col sm:flex-row gap-4">
             <a href="#propiedades" class="inline-flex items-center justify-center px-7 py-4 bg-white text-[var(--deep)] font-semibold tracking-wide rounded-full hover:bg-slate-100 transition">Ver propiedades</a>
@@ -108,16 +101,16 @@
           </div>
           <div class="mt-14 grid grid-cols-3 gap-5 max-w-xl">
             <div class="border-t border-white/25 pt-4">
-              <p class="display-font text-white text-4xl">6+</p>
+              <p class="display-font text-white text-4xl">12+</p>
               <p class="text-white/70 text-sm">Propiedades destacadas</p>
             </div>
             <div class="border-t border-white/25 pt-4">
-              <p class="display-font text-white text-4xl">Costa Rica</p>
-              <p class="text-white/70 text-sm">Zonas a trabajar</p>
+              <p class="display-font text-white text-4xl">4</p>
+              <p class="text-white/70 text-sm">Zonas premium</p>
             </div>
             <div class="border-t border-white/25 pt-4">
-              <p class="display-font text-white text-4xl">100%</p>
-              <p class="text-white/70 text-sm">Asesoria Legal</p>
+              <p class="display-font text-white text-4xl">24h</p>
+              <p class="text-white/70 text-sm">Respuesta estimada</p>
             </div>
           </div>
         </div>
@@ -134,24 +127,23 @@
                   <span class="text-xs px-3 py-1 rounded-full bg-[var(--soft)] text-[var(--deep)]">Bosque nuboso</span>
                 </div>
               </div>
+
               <div class="p-6 space-y-6">
-                <div class="h-72 rounded-[1.25rem] bg-gradient-to-br from-[var(--deep)] to-[var(--deep-2)] relative overflow-hidden">
-                  <div class="absolute inset-x-8 bottom-8 top-12 flex items-end gap-4 opacity-70">
-                    <div class="w-16 h-28 border-2 border-white/80 rounded-t-[2rem]"></div>
-                    <div class="w-20 h-40 border-2 border-white/80 rounded-t-[2rem]"></div>
-                    <div class="w-24 h-52 border-2 border-white/80 rounded-t-[2rem]"></div>
-                    <div class="w-16 h-36 border-2 border-white/80 rounded-t-[2rem]"></div>
-                  </div>
-                  <div class="absolute left-0 right-0 bottom-9 h-px bg-white/70"></div>
-                  <div class="absolute left-10 bottom-10 w-40 h-10 border-t border-white/60 rounded-[50%]"></div>
+                <div class="h-72 rounded-[1.25rem] relative overflow-hidden bg-[var(--deep)]">
+                  <img
+                    src="hotel-montana.png"
+                    alt="Hotel de montaña rodeado de bosque nuboso"
+                    class="absolute inset-0 h-full w-full object-cover"
+                  />
                 </div>
+
                 <div class="grid grid-cols-3 gap-3 text-center">
                   <div class="bg-[var(--soft)] rounded-2xl p-4">
-                    <p class="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">HAB</p>
+                    <p class="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Hab</p>
                     <p class="display-font text-3xl text-[var(--deep)]">28</p>
                   </div>
                   <div class="bg-[var(--soft)] rounded-2xl p-4">
-                    <p class="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">REST</p>
+                    <p class="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Rest</p>
                     <p class="display-font text-3xl text-[var(--deep)]">1</p>
                   </div>
                   <div class="bg-[var(--soft)] rounded-2xl p-4">
@@ -159,6 +151,7 @@
                     <p class="display-font text-3xl text-[var(--deep)]">21,940</p>
                   </div>
                 </div>
+
                 <div class="flex items-center justify-between">
                   <div>
                     <p class="text-sm text-[var(--muted)]">Desde</p>
@@ -185,12 +178,14 @@
             <option>Casa</option>
             <option>Departamento</option>
             <option>Penthouse</option>
+            <option>Hotel</option>
           </select>
           <select class="rounded-full border border-slate-300 px-4 py-3 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[var(--deep)]">
             <option>Zona</option>
             <option>Centro</option>
             <option>Playa</option>
             <option>Residencial</option>
+            <option>Montaña</option>
           </select>
           <select class="rounded-full border border-slate-300 px-4 py-3 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[var(--deep)]">
             <option>Precio</option>
@@ -220,14 +215,14 @@
             <div class="h-64 bg-gradient-to-br from-[#183f50] to-[#2c5c70] relative">
               <div class="absolute inset-0 opacity-20" style="background-image: linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px); background-size: 34px 34px;"></div>
               <div class="absolute bottom-6 left-6 right-6 text-white">
-                <p class="text-xs uppercase tracking-[0.3em]">SAN JUAN GRANDE</p>
-                <h3 class="display-font text-4xl">FINCA</h3>
+                <p class="text-xs uppercase tracking-[0.3em]">Penthouse</p>
+                <h3 class="display-font text-4xl">Vista Horizonte</h3>
               </div>
             </div>
             <div class="p-6">
-              <p class="text-[var(--muted)]">50.000 m² - Casa en construccion </p>
+              <p class="text-[var(--muted)]">3 recámaras · 3 baños · 240 m² · Terraza panorámica</p>
               <div class="mt-5 flex items-center justify-between">
-                <span class="display-font text-3xl text-[var(--deep)]">US$ XXXXX</span>
+                <span class="display-font text-3xl text-[var(--deep)]">US$ 640K</span>
                 <button class="text-sm text-[var(--deep)] font-semibold">Ver más</button>
               </div>
             </div>
@@ -237,14 +232,14 @@
             <div class="h-64 bg-gradient-to-br from-[#28576a] to-[#7fa4b4] relative">
               <div class="absolute inset-x-8 bottom-8 h-28 border border-white/70 rounded-t-[3rem]"></div>
               <div class="absolute bottom-6 left-6 right-6 text-white">
-                <p class="text-xs uppercase tracking-[0.3em]">XXXXXX</p>
-                <h3 class="display-font text-4xl">XXXXX</h3>
+                <p class="text-xs uppercase tracking-[0.3em]">Residencial</p>
+                <h3 class="display-font text-4xl">Jardines del Lago</h3>
               </div>
             </div>
             <div class="p-6">
-              <p class="text-[var(--muted)]">XXXXXXXX</p>
+              <p class="text-[var(--muted)]">4 recámaras · 4 baños · 360 m² · Jardín privado</p>
               <div class="mt-5 flex items-center justify-between">
-                <span class="display-font text-3xl text-[var(--deep)]">US$ XXXXX</span>
+                <span class="display-font text-3xl text-[var(--deep)]">US$ 890K</span>
                 <button class="text-sm text-[var(--deep)] font-semibold">Ver más</button>
               </div>
             </div>
@@ -255,13 +250,13 @@
               <div class="absolute left-10 right-10 bottom-10 top-14 border border-white/60 rounded-[2rem]"></div>
               <div class="absolute bottom-6 left-6 right-6 text-white">
                 <p class="text-xs uppercase tracking-[0.3em]">Inversión</p>
-                <h3 class="display-font text-4xl">XXXXXX</h3>
+                <h3 class="display-font text-4xl">Torre Marina</h3>
               </div>
             </div>
             <div class="p-6">
-              <p class="text-[var(--muted)]">XXXXXXX</p>
+              <p class="text-[var(--muted)]">2 recámaras · 2 baños · 180 m² · Amenidades premium</p>
               <div class="mt-5 flex items-center justify-between">
-                <span class="display-font text-3xl text-[var(--deep)]">US$ XXXXXX</span>
+                <span class="display-font text-3xl text-[var(--deep)]">US$ 470K</span>
                 <button class="text-sm text-[var(--deep)] font-semibold">Ver más</button>
               </div>
             </div>
@@ -270,13 +265,13 @@
       </div>
     </section>
 
-
     <section id="contacto" class="py-24 bg-white">
       <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
         <div>
           <p class="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">Contacto</p>
           <h2 class="display-font text-5xl text-[var(--deep)] mt-3">Hablemos de tu próxima inversión</h2>
           <p class="mt-6 text-[var(--muted)] leading-8 max-w-xl">
+            Esta estructura está pensada para convertir visitas en consultas. Si quieres, después puedo convertirla en una web con propiedades dinámicas, galería real, integración con WhatsApp y formularios funcionales.
           </p>
           <div class="mt-10 space-y-4 text-sm">
             <p><strong>Correo:</strong> info@altearacr.com</p>
